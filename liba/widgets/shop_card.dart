@@ -1,3 +1,6 @@
+//import 'package:shopping_list/screens/menu.dart'; 
+    
+
 import 'package:flutter/material.dart';
 import 'package:shopping_list/screens/shoplist_form.dart';
 
@@ -25,11 +28,10 @@ class ShopCard extends StatelessWidget {
             ..hideCurrentSnackBar()
             ..showSnackBar(SnackBar(
                 content: Text("Kamu telah menekan tombol ${item.name}!")));
-
-          // Navigate ke route yang sesuai (tergantung jenis tombol)
           if (item.name == "Tambah Produk") {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const ShopFormPage()));
+            // TODO (done): Gunakan Navigator.push untuk melakukan navigasi ke MaterialPageRoute yang mencakup ShopFormPage.
+            Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const ShopFormPage()));
           }
         },
         child: Container(
@@ -58,3 +60,4 @@ class ShopCard extends StatelessWidget {
     );
   }
 }
+
